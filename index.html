@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slot Theory (Android) - Privacy Policy</title>
+  <style>
+    body { font-family: sans-serif; max-width: 680px; margin: 48px auto; padding: 0 24px;
+           color: #222; line-height: 1.6; }
+    h1   { font-size: 1.6rem; margin-bottom: 0.25em; }
+    h2   { font-size: 1.1rem; margin-top: 2em; border-bottom: 1px solid #ddd;
+           padding-bottom: 0.25em; }
+    h3   { font-size: 1rem; margin-top: 1.4em; }
+    p, li { font-size: 0.97rem; }
+    a    { color: #1a73e8; }
+    code { font-size: 0.9em; }
+    table { border-collapse: collapse; font-size: 0.92rem; margin: 0.5em 0 1em; }
+    th, td { border: 1px solid #ddd; padding: 4px 8px; text-align: left; vertical-align: top; }
+    th { background: #f4f4f4; }
+    .updated { color: #777; font-size: 0.88rem; margin-top: 0; }
+  </style>
+</head>
+<body>
+
+<h1>Privacy Policy - Slot Theory for Android</h1>
+<p class="updated">Last updated: September 2026 &nbsp;&middot;&nbsp; Publisher: 7ants Studios
+  &nbsp;&middot;&nbsp; Package: <code>com.sevenants.slottheory</code></p>
+
+<p>
+  This policy applies to the Android version of the game <strong>Slot Theory</strong>,
+  distributed through Google Play. It lists exactly what the game sends off your device,
+  when, why, and how to stop it. The Steam version has its own policy.
+</p>
+
+<p>
+  In short: the game has no account system, no ads, no analytics SDK, no in-app purchases
+  and no chat. It talks to one server (our leaderboard and crash-report backend, hosted on
+  Supabase in the EU) in exactly two situations, both described below.
+</p>
+
+<h2>1. Data the game sends</h2>
+
+<h3>1a. Leaderboard submissions (only when you choose to submit)</h3>
+<p>
+  At the end of a run you can submit your score to the global leaderboard. Nothing is sent
+  unless you confirm the submission. The first submission asks you for a short display name
+  (up to 10 characters); if you leave it empty your entry shows as "Anonymous". A submission
+  contains:
+</p>
+<table>
+  <tr><th>Field</th><th>What it is</th></tr>
+  <tr><td>Install ID</td><td>A random identifier (UUID) generated on your device the first time the game runs. It is not derived from your device, your Google account or any hardware identifier. It lets the leaderboard keep one personal-best row per installation. Reinstalling the game generates a new one.</td></tr>
+  <tr><td>Display name</td><td>The name you typed, or "Anonymous".</td></tr>
+  <tr><td>Run result</td><td>Map, difficulty, mode, score, whether the run was won, wave reached, lives remaining, total kills, total damage dealt, run duration in seconds.</td></tr>
+  <tr><td>Build</td><td>The towers and modifiers you drafted (an encoded build code) and the build name you typed for it, if any.</td></tr>
+  <tr><td>Game version</td><td>The version string of the game.</td></tr>
+</table>
+<p>
+  Once you have submitted a personal best, the game may re-send that same stored entry on a
+  later launch if an earlier upload did not complete. It never submits a run you did not
+  choose to submit. Viewing the leaderboard downloads other players' display names and run
+  results; nothing about you is sent when you only view it.
+</p>
+
+<h3>1b. Crash reports (on by default; can be switched off)</h3>
+<p>
+  If the game crashes, or was closed without shutting down cleanly, it writes a crash report
+  to its private storage and uploads it on the next launch. The
+  <strong>Settings &gt; Send Crash Reports</strong> toggle turns the upload off; reports are
+  then kept only on your device (at most 10, oldest deleted first). A crash report contains:
+</p>
+<table>
+  <tr><th>Field</th><th>What it is</th></tr>
+  <tr><td>Install ID</td><td>The same random identifier as above, so repeated crashes from one installation can be grouped.</td></tr>
+  <tr><td>Versions</td><td>Game version, game engine (Godot) version, platform name ("Android") and the Android OS version string.</td></tr>
+  <tr><td>Crash details</td><td>The kind of failure, the exception type and message, and the code stack trace at the point of failure, plus up to 8 earlier exceptions from the same session (type, message, stack, timestamp).</td></tr>
+  <tr><td>Session marker</td><td>Where the game was when it failed: map id, difficulty, wave number, whether endless mode was active, the number of enemies alive, the game's memory use in MB, the number of scene nodes, and a timestamp.</td></tr>
+  <tr><td>Report metadata</td><td>A random report id, the time the report was written, and whether the build is a demo.</td></tr>
+</table>
+<p>
+  The Android version <strong>never</strong> attaches the game's log file to a crash report
+  (the desktop version does). No screenshot, no input history and no device identifier is
+  included.
+</p>
+
+<h3>1c. Network metadata</h3>
+<p>
+  Any connection to a server exposes your IP address to that server while the request is
+  handled. We do not store IP addresses in our data and do not use them for anything. Our
+  hosting provider (Supabase) may keep standard transient connection logs under its own
+  policy, linked below.
+</p>
+
+<h2>2. Data the game does NOT collect</h2>
+<ul>
+  <li>No name, email address, phone number or contact details (the display name is a free-text nickname you choose)</li>
+  <li>No Google account information, no advertising ID, no device serial, no IMEI, no hardware identifiers</li>
+  <li>No location</li>
+  <li>No contacts, photos, files, microphone or camera; the app requests only the Internet permission</li>
+  <li>No gameplay analytics, telemetry, usage statistics or session tracking beyond the two items above</li>
+  <li>No advertising, no third-party analytics SDK, no in-app purchases</li>
+</ul>
+
+<h2>3. Data kept on your device</h2>
+<p>
+  Settings, unlocks, achievements, your profile and run history, custom maps and the resume
+  slot are stored in the app's private storage on your device. The app opts out of Android
+  auto-backup, so this data is not copied to your Google account. Uninstalling the game
+  deletes it. Nothing in this local data is sent anywhere except as described in section 1.
+</p>
+
+<h2>4. How the data is used</h2>
+<ul>
+  <li>Leaderboard entries are used solely to show the global leaderboard inside the game.</li>
+  <li>Crash reports are used solely to find and fix bugs in the game.</li>
+</ul>
+<p>
+  Neither is sold, used for advertising or marketing, shared with third parties, or combined
+  with any other data. Supabase processes the data on our behalf as a hosting provider and
+  does not use it for its own purposes.
+</p>
+
+<h2>5. Retention and deletion</h2>
+<ul>
+  <li><strong>Leaderboard entries</strong> are kept indefinitely so your best run stays on the board. To have your entries deleted, contact us (below) with your display name and, if possible, the approximate date and map of the run. We delete them within 30 days.</li>
+  <li><strong>Crash reports</strong> are kept for at most 12 months on the server and then deleted. You can request earlier deletion the same way.</li>
+  <li><strong>Local data</strong> is deleted when you uninstall the app or clear its storage in Android settings.</li>
+</ul>
+
+<h2>6. Third-party services</h2>
+<ul>
+  <li>
+    <strong>Supabase</strong> (leaderboard and crash-report storage; EU region).
+    <a href="https://supabase.com/privacy" target="_blank">Supabase Privacy Policy</a>.
+  </li>
+  <li>
+    <strong>Google Play</strong> handles distribution and any payment. Google's own data
+    collection (including Play's crash and ANR statistics) is governed by
+    <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.
+    The game itself does not integrate Google Play Games Services, Firebase or any Google SDK.
+  </li>
+</ul>
+
+<h2>7. Children</h2>
+<p>
+  Slot Theory is not directed at children under 13, has no account system and no chat. The
+  only free-text fields are the display name and a build name for a submitted score. If you
+  believe a child has submitted data, contact us and we will delete it promptly.
+</p>
+
+<h2>8. Your rights</h2>
+<p>
+  Depending on where you live (for example under the GDPR) you may have the right to access,
+  correct or delete the data we hold about you, or to object to its processing. Because the
+  only identifier we hold is the random install ID, we can act on a request when you provide
+  your display name or the details of the run. Contact details are below.
+</p>
+
+<h2>9. Changes to this policy</h2>
+<p>
+  We may update this policy occasionally. The "last updated" date at the top reflects the
+  latest change, and material changes are noted in the game's release notes.
+</p>
+
+<h2>10. Contact</h2>
+<p>
+  Questions, access or deletion requests: <strong>7ants Studios</strong><br>
+  Email: <a href="mailto:contact@7antsstudios.com">contact@7antsstudios.com</a>
+</p>
+
+</body>
+</html>
