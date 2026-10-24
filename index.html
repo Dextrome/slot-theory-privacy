@@ -23,7 +23,7 @@
 <body>
 
 <h1>Privacy Policy - Slot Theory for Android</h1>
-<p class="updated">Last updated: September 2026 &nbsp;&middot;&nbsp; Publisher: 7ants Studios
+<p class="updated">Last updated: October 2026 &nbsp;&middot;&nbsp; Publisher: 7ants Studios
   &nbsp;&middot;&nbsp; Package: <code>com.sevenants.slottheory</code></p>
 
 <p>
@@ -33,9 +33,9 @@
 </p>
 
 <p>
-  In short: the game has no account system, no ads, no analytics SDK, no in-app purchases
-  and no chat. It talks to one server (our leaderboard and crash-report backend, hosted on
-  Supabase in the EU) in exactly two situations, both described below.
+  The game has no account system, ads, analytics SDK or chat. It offers one optional permanent
+  full-game purchase through Google Play. Its leaderboard, crash-report and gameplay-activity backend is hosted
+  on Supabase in the EU (section 1); purchase handling through Google Play is described in section 3.
 </p>
 
 <h2>1. Data the game sends</h2>
@@ -83,7 +83,30 @@
   included.
 </p>
 
-<h3>1c. Network metadata</h3>
+<h3>1c. Gameplay activity (on by default; can be switched off)</h3>
+<p>
+  To understand whether players return and which game modes they use, the game sends session
+  starts, a heartbeat about once per foreground minute, background/return events, and run
+  starts, resumes, results and exits to Supabase. Turn this off with
+  <strong>Settings &gt; Share Gameplay Activity</strong>. Turning it off stops collection
+  and upload and deletes activity waiting to be uploaded on this device.
+</p>
+<p>
+  Events contain a separate random installation UUID kept only on this device, random session,
+  run-visit and event IDs, timestamps, game version, platform, demo status, mode, difficulty,
+  wave, result or exit reason, and elapsed foreground time. They do not contain your display
+  name, leaderboard ID, Google account, purchase information, map names or hardware identifiers.
+  The installation UUID is pseudonymous: it groups visits from the same installation but does
+  not identify a named Google Play tester. Reinstalling or clearing app storage resets it.
+  Foreground time includes menus and paused gameplay; background time is excluded.
+</p>
+<p>
+  Failed uploads wait in private app storage (up to 1,000 events, for up to 30 days) and retry
+  while the game is open or on a later launch. Previously uploaded activity remains subject
+  to the retention and deletion rules below.
+</p>
+
+<h3>1d. Network metadata</h3>
 <p>
   Any connection to a server exposes your IP address to that server while the request is
   handled. We do not store IP addresses in our data and do not use them for anything. Our
@@ -96,9 +119,9 @@
   <li>No name, email address, phone number or contact details (the display name is a free-text nickname you choose)</li>
   <li>No Google account information, no advertising ID, no device serial, no IMEI, no hardware identifiers</li>
   <li>No location</li>
-  <li>No contacts, photos, files, microphone or camera; the app requests only the Internet permission</li>
-  <li>No gameplay analytics, telemetry, usage statistics or session tracking beyond the two items above</li>
-  <li>No advertising, no third-party analytics SDK, no in-app purchases</li>
+  <li>No contacts, photos, files, microphone or camera; the app requests Internet access and vibration permission for optional haptic feedback</li>
+  <li>No gameplay analytics or session tracking beyond the limited activity described in section 1c</li>
+  <li>No advertising or third-party analytics SDK</li>
 </ul>
 
 <h2>3. Data kept on your device</h2>
@@ -106,16 +129,33 @@
   Settings, unlocks, achievements, your profile and run history, custom maps and the resume
   slot are stored in the app's private storage on your device. The app opts out of Android
   auto-backup, so this data is not copied to your Google account. Uninstalling the game
-  deletes it. Nothing in this local data is sent anywhere except as described in section 1.
+  deletes it. Game progress is not sent anywhere except as described in section 1.
 </p>
+<p>
+  The free demo offers one optional permanent full-game purchase through Google Play Billing.
+  Google handles checkout and payment details. The game receives a signed purchase receipt
+  (including its product, purchase token, order details and status), verifies it on your device,
+  and stores it privately so purchased content remains playable offline. It queries Google Play
+  to restore ownership and sends the purchase token to Google Play to acknowledge a completed
+  purchase. We do not send receipts or payment details to our own servers or include them in
+  crash reports. Google retains the purchase under its own policies. Clearing app storage
+  removes the local receipt; Restore purchase retrieves ownership through the purchasing
+  Google Play account. It does not restore locally saved game progress.
+</p>
+  <p>
+    Complimentary review access can be enabled with a code provided for app review. That code
+    is checked and saved locally on the device, is not sent to our servers, and does not create
+    a purchase. Removing review access or clearing app storage removes this local code.
+  </p>
 
 <h2>4. How the data is used</h2>
 <ul>
   <li>Leaderboard entries are used solely to show the global leaderboard inside the game.</li>
   <li>Crash reports are used solely to find and fix bugs in the game.</li>
+  <li>Gameplay activity is used to measure player engagement, return visits and run completion, and improve the game.</li>
 </ul>
 <p>
-  Neither is sold, used for advertising or marketing, shared with third parties, or combined
+  This data is not sold, used for advertising or marketing, shared with third parties, or combined
   with any other data. Supabase processes the data on our behalf as a hosting provider and
   does not use it for its own purposes.
 </p>
@@ -124,20 +164,22 @@
 <ul>
   <li><strong>Leaderboard entries</strong> are kept indefinitely so your best run stays on the board. To have your entries deleted, contact us (below) with your display name and, if possible, the approximate date and map of the run. We delete them within 30 days.</li>
   <li><strong>Crash reports</strong> are kept for at most 12 months on the server and then deleted. You can request earlier deletion the same way.</li>
+  <li><strong>Gameplay activity</strong> is automatically deleted after 90 days on the server. You can request earlier deletion by copying your random ID from <strong>Settings &gt; Activity ID</strong> and including it in your request. We do not have a Google account or display name linked to this UUID.</li>
   <li><strong>Local data</strong> is deleted when you uninstall the app or clear its storage in Android settings.</li>
 </ul>
 
 <h2>6. Third-party services</h2>
 <ul>
   <li>
-    <strong>Supabase</strong> (leaderboard and crash-report storage; EU region).
+    <strong>Supabase</strong> (leaderboard, crash-report and gameplay-activity storage; EU region).
     <a href="https://supabase.com/privacy" target="_blank">Supabase Privacy Policy</a>.
   </li>
   <li>
     <strong>Google Play</strong> handles distribution and any payment. Google's own data
     collection (including Play's crash and ANR statistics) is governed by
     <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.
-    The game itself does not integrate Google Play Games Services, Firebase or any Google SDK.
+    The game integrates Google Play Billing through the GodotGooglePlayBilling plugin.
+    It does not integrate Google Play Games Services, Firebase or advertising SDKs.
   </li>
 </ul>
 
