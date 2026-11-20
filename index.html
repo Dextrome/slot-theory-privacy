@@ -23,7 +23,7 @@
 <body>
 
 <h1>Privacy Policy - Slot Theory for Android</h1>
-<p class="updated">Last updated: October 24, 2026 &nbsp;&middot;&nbsp; Publisher: 7 Ants Games
+<p class="updated">Last updated: November 21, 2026 &nbsp;&middot;&nbsp; Publisher: 7 Ants Games
   &nbsp;&middot;&nbsp; Package: <code>com.sevenants.slottheory</code></p>
 
 <p>
@@ -33,9 +33,8 @@
 </p>
 
 <p>
-  The game has no account system or chat. The replayable free demo can include occasional ads
-  through Google AdMob when advertising is enabled. One optional permanent full-game purchase
-  through Google Play unlocks the full game and removes all ads. Its leaderboard, crash-report and gameplay-activity backend is hosted
+  The game has no account system or chat. The replayable free demo has no advertising. One optional permanent full-game purchase
+  through Google Play unlocks the full game. Its leaderboard, crash-report and gameplay-activity backend is hosted
   on Supabase in the EU (section 1); purchase handling through Google Play is described in section 3.
 </p>
 
@@ -115,48 +114,25 @@
   policy, linked below.
 </p>
 
-<h3>1e. Advertising and consent</h3>
-<p>
-  When advertising is enabled, the demo uses Google's Mobile Ads SDK through the Poing Studios
-  Godot plugin and Google's User Messaging Platform (UMP) for privacy choices. Google may collect
-  and share IP addresses (including approximate location inferred from them), ad and app
-  interactions, diagnostic information, Android advertising ID, app set ID and, where applicable,
-  other device or account identifiers for advertising, measurement and fraud prevention. These
-  SDK connections are encrypted in transit. This data goes to Google and its advertising services,
-  separately from the Supabase game data above. We do not send your game profile, leaderboard
-  nickname, gameplay-activity UUID or purchase receipt to AdMob.
-</p>
-<p>
-  At a menu, UMP checks whether privacy choices must be shown before ad requests. Where required,
-  revisit them under <strong>Settings &gt; Ad privacy options</strong>. Your choices can affect which
-  ads Google may serve; refusing personalization does not necessarily disable permitted limited ads.
-  If UMP does not permit requests, the game skips ads. You can reset/delete your advertising ID in
-  Android settings. Full-game owners never see ads. Missing advertising configuration disables ads.
-  Ads appear only on a return to the main menu after reviewing results, never during tutorials or
-  gameplay, and provide no gameplay rewards. Google's retention and privacy controls are described
-  in <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and
-  <a href="https://myadcenter.google.com/">My Ad Center</a>.
-</p>
 <h2>2. Data the game's own backend does NOT collect</h2>
 <ul>
   <li>No name, email address, phone number or contact details (the display name is a free-text nickname you choose)</li>
-  <li>No Google account information, advertising ID, device serial, IMEI or hardware identifiers in our Supabase data; advertising SDK data is described in section 1e</li>
+  <li>No Google account information, advertising ID, device serial, IMEI or hardware identifiers in our Supabase data; the game contains no advertising SDK</li>
   <li>No location permission or precise location; Google may infer approximate location from IP addresses</li>
   <li>No contacts, photos, files, microphone or camera; the app requests Internet access and vibration permission for optional haptic feedback</li>
   <li>No gameplay analytics or session tracking beyond the limited activity described in section 1c</li>
-  <li>No Firebase or third-party gameplay analytics SDK; Google advertising SDK collection is described above</li>
+  <li>No Firebase or third-party gameplay analytics SDK, and no advertising SDK</li>
 </ul>
 
 <h2>3. Data kept on your device</h2>
 <p>
-  The ad completion counter, completed-run IDs and last display timestamp, consent choices,
-  settings, unlocks, achievements, your profile and run history, custom maps and the resume
+  Settings, unlocks, achievements, your profile and run history, custom maps and the resume
   slot are stored in the app's private storage on your device. The app opts out of Android
   auto-backup, so this data is not copied to your Google account. Uninstalling the game
   deletes it. Game progress is not sent anywhere except as described in section 1.
 </p>
 <p>
-  The free demo offers one optional permanent full-game purchase through Google Play Billing, which also removes all ads.
+  The free demo offers one optional permanent full-game purchase through Google Play Billing.
   Google handles checkout and payment details. The game receives a signed purchase receipt
   (including its product, purchase token, order details and status), verifies it on your device,
   and stores it privately so purchased content remains playable offline. It queries Google Play
@@ -166,12 +142,6 @@
   removes the local receipt; Restore purchase retrieves ownership through the purchasing
   Google Play account. It does not restore locally saved game progress.
 </p>
-  <p>
-    Complimentary review access can be enabled with a code provided for app review. That code
-    is checked and saved locally on the device, is not sent to our servers, and does not create
-    a purchase. Removing review access or clearing app storage removes this local code.
-  </p>
-
 <h2>4. How the data is used</h2>
 <ul>
   <li>Leaderboard entries are used solely to show the global leaderboard inside the game.</li>
@@ -203,7 +173,7 @@
     collection (including Play's crash and ANR statistics) is governed by
     <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.
     The game integrates Google Play Billing through the GodotGooglePlayBilling plugin.
-    It also integrates Google AdMob and UMP as described in section 1e. It does not integrate Google Play Games Services or Firebase.
+    It does not integrate any advertising SDK, Google Play Games Services or Firebase.
   </li>
 </ul>
 
